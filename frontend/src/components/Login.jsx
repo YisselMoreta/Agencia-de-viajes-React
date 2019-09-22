@@ -1,14 +1,16 @@
 import React from 'react';
 import '../CSS/login.scss';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
 
 export default class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			usuario: '',
-			password: ''
+			user: '',
+			password: '',
+			_id: ''
+			
 		};
 	}
 	handleChange = (event) => {
@@ -17,9 +19,18 @@ export default class Login extends React.Component {
 	};
 	handleSubmit = (event) => {
 		event.preventDefault();
-		const { usuario, password } = this.state;
-		console.log( { usuario, password });
-		
+		const { user, password } = this.state;
+		fetch('http://localhost:3001/user/login', {
+			method: 'POST',
+			body: JSON.stringify(this.state),
+			 headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            } 
+		})
+		.then(res => res.json())
+		.then(data => console.log(data))
+		.catch(error => console.log(error));
 	};
 	render() {
 		return (
@@ -57,9 +68,9 @@ export default class Login extends React.Component {
 								<div className="contenedorInput">
 									<input
 										type="text"
-										name="usuario"
+										name="user"
 										placeholder="Usuario"
-										value={this.state.usuario}
+										value={this.state.user}
 										onChange={this.handleChange}
 										autoFocus
 									/>
@@ -72,7 +83,7 @@ export default class Login extends React.Component {
 									/>
 								</div>
 								 <button type="submit" className="submit" value="Submit">Enviar</button>
-								{/* <p>¿No recuerdas tu contraseña?</p> */}
+								
 							</form>
 						</div>
 					</div>

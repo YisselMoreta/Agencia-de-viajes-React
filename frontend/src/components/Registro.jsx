@@ -1,14 +1,14 @@
 import React from 'react';
 import  '../CSS/registro.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
 
 
 export default class Registro extends React.Component{
   	constructor(props) {
       		super(props);
 		this.state = {
-            usuario: '',
+            user: '',
             email: '',
             password: '',
             passwordConfirm: '',
@@ -21,14 +21,19 @@ export default class Registro extends React.Component{
 	}
 	handleSubmit = (event) => {
 		event.preventDefault();
-        const { usuario, email, password } = this.state
+        const { user, email, password } = this.state
         if (this.state.password === this.state.passwordConfirm && this.state.terms) {
-            axios.post('http://localhost:3001/user/signup', { usuario, email, password })
-                .then(res=>{
-                    console.log(res.data)
-                   
-                })
-                .catch(console.log)
+            fetch('http://localhost:3001/user/signup', {
+			method: 'POST',
+			body: JSON.stringify(this.state),
+			 headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            } 
+		})
+		.then(res => res.json())
+		.then(data => console.log(data))
+		.catch(error => console.log(error));
         }
     }
 
@@ -65,15 +70,15 @@ export default class Registro extends React.Component{
             <div className="contenedorFormulario">
                 <form onSubmit={this.handleSubmit}>
                     <h1>REGISTRO</h1>
-                    {/* <p>¿Ya estás registrado?</p> */}
+                    
                     <div className="contenedorInput">
-                        <input type="text" name="usuario" placeholder="Usuario" id="nombre"  onChange={this.handleChange} value={this.state.usuario}/>
+                        <input type="text" name="user" placeholder="Usuario" id="nombre"  onChange={this.handleChange} value={this.state.user}/>
                         <input type="text" name="email" placeholder="Correo electrónico" id="email" onChange={this.handleChange} value={this.state.email}/>
                         <input type="password" name="password" placeholder="Contraseña" id="password"  onChange={this.handleChange} value={this.state.password}/>
-                        <input type="password" name="confirmarClave" placeholder="Confirmar contraseña" id="confirmarPassword" onChange={this.handleChange} value={this.state.confirmarClave}/>
+                        <input type="password" name="passwordConfirm" placeholder="Confirmar contraseña" id="confirmarPassword" onChange={this.handleChange} value={this.state.passwordConfirm}/>
                     </div>
                     <div>
-                        <input type="checkbox" name="terminos" value="terminos" className="terminos" onChange={this.handleChange} value={this.state.terminos}/>
+                        <input type="checkbox" name="terms" value="terminos" className="terminos" onChange={this.handleChange} value={this.state.terms}/>
                         <span className="terminos">Acepta los términos y condiciones, así como la políticas de privacidad.</span>
                     </div>
                     <button type="submit" className="submit" value="Submit">Enviar</button>
