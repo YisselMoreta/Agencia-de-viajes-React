@@ -243,7 +243,7 @@ export default class PaginaPrincipal extends React.Component{
                 Europa, Norteamérica y Asia. Nuestro objetivo ahora es ir ampliando horizontes poco a poco
             </p>
             <div className="contenedorBotonDiscubrir">
-                <Link to="/index" >DESCUBRIR</Link>
+                <Link to="/index">DESCUBRIR</Link>
             </div>
         </div>
     </section>
@@ -252,7 +252,7 @@ export default class PaginaPrincipal extends React.Component{
         <div className="contenedorMapa">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.6630991176203!2d-3.7037322178409378!3d40.42621995026423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42286264887f17%3A0x78848aa7adfdb15f!2sCalle%20de%20San%20Andr%C3%A9s%2C%208%2C%2028004%20Madrid!5e0!3m2!1ses!2ses!4v1567937320242!5m2!1ses!2ses"
-                width="450" height="500" frameborder="0"  allowfullscreen=""title="frame"  ></iframe>
+                width="450" height="500" frameBorder="0"  allowFullScreen=""title="frame"  ></iframe>
         </div>
         <div className="contenedorContacto">
             <div>

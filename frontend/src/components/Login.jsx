@@ -46,9 +46,9 @@ export default class Login extends React.Component {
 								<p>Travel</p>
 							</div>
 							<ul>
-								<li>Destinos</li>
-								<li>Quiénes somos</li>
-								<li>Dónde estamos</li>
+								   	<li><Link to="/#SeccionDestinos">Destinos</Link></li>
+                    				<li><Link to="/#nosotros">Quiénes somos</Link></li>
+                    				<li><Link to="/#ubicacion">Dónde estamos</Link></li>
 							</ul>
 							<div className="iconosRedes">
 								<img src="/images/fb-ico.png" alt="Logo Facebook" />
@@ -82,8 +82,9 @@ export default class Login extends React.Component {
 										onChange={this.handleChange}
 									/>
 								</div>
+								{/* <Link to="#"> */}
 								 <button type="submit" className="submit" value="Submit">Enviar</button>
-								
+								{/* </Link> */}
 							</form>
 						</div>
 					</div>

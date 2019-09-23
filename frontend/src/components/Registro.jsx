@@ -50,9 +50,9 @@ export default class Registro extends React.Component{
                     <p>Travel</p>
                 </div>
                 <ul>
-                    <li>Destinos</li>
-                    <li>Quiénes somos</li>
-                    <li>Dónde estamos</li>
+                    <li><Link to="/#SeccionDestinos">Destinos</Link></li>
+                    <li><Link to="/#nosotros">Quiénes somos</Link></li>
+                    <li><Link to="/#ubicacion">Dónde estamos</Link></li>
                 </ul>
                 <div className="iconosRedes">
                     <img src="/images/fb-ico.png" alt="Logo Facebook" />
@@ -72,16 +72,18 @@ export default class Registro extends React.Component{
                     <h1>REGISTRO</h1>
                     
                     <div className="contenedorInput">
-                        <input type="text" name="user" placeholder="Usuario" id="nombre"  onChange={this.handleChange} value={this.state.user}/>
-                        <input type="text" name="email" placeholder="Correo electrónico" id="email" onChange={this.handleChange} value={this.state.email}/>
-                        <input type="password" name="password" placeholder="Contraseña" id="password"  onChange={this.handleChange} value={this.state.password}/>
-                        <input type="password" name="passwordConfirm" placeholder="Confirmar contraseña" id="confirmarPassword" onChange={this.handleChange} value={this.state.passwordConfirm}/>
+                        <input type="text" name="user" placeholder="Usuario" id="nombre"  onChange={this.handleChange} value={this.state.user} required/>
+                        <input type="text" name="email" placeholder="Correo electrónico" id="email" onChange={this.handleChange} value={this.state.email} required/>
+                        <input type="password" name="password" placeholder="Contraseña" id="password"  onChange={this.handleChange} value={this.state.password} required/>
+                        <input type="password" name="passwordConfirm" placeholder="Confirmar contraseña" id="confirmarPassword" onChange={this.handleChange} value={this.state.passwordConfirm} required/>
                     </div>
                     <div>
                         <input type="checkbox" name="terms" value="terminos" className="terminos" onChange={this.handleChange} value={this.state.terms}/>
                         <span className="terminos">Acepta los términos y condiciones, así como la políticas de privacidad.</span>
                     </div>
+                    <Link to="#">
                     <button type="submit" className="submit" value="Submit">Enviar</button>
+                    </Link>
                 </form>
             </div>
         </div>
