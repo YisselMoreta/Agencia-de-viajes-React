@@ -1,13 +1,15 @@
-#seccion3
-{
-    background-image: url('/images/nathan-anderson-316188-unsplash.jpg');
-}
-#subseccion3
-{
-    width: 33%;
-}
 *{
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#seccion3{
+    background-image: url('/images/nathan-anderson-316188-unsplash.jpg');
+}
+#subseccion3{
+    width: 33%;
 }
 
 header{
@@ -171,6 +173,40 @@ header{
      text-align: center;
      font-size: 2vw;
  }
+ #quintaFilaDestinos{
+    display:flex;
+    position: relative;
+    flex-direction:row;
+ }
+ #quintaFilaDestinos>div>img{
+     width: 20vw;
+     height: 15vw;
+ }
+ #quintaFilaDestinos>div{
+     margin: 2vw;
+     position: relative;
+ }
+ #quintaFilaDestinos>div>h2{
+     text-align: center;
+     font-size: 2vw;
+ }
+ #sextaFilaDestinos{
+    display:flex;
+    position: relative;
+    flex-direction:row;
+ }
+ #sextaFilaDestinos>div>img{
+     width: 20vw;
+     height: 15vw;
+ }
+ #sextaFilaDestinos>div{
+     margin: 2vw;
+     position: relative;
+ }
+ #sextaFilaDestinos>div>h2{
+     text-align: center;
+     font-size: 2vw;
+ }
  /*---------------------------------------------*/
  .descuento{
      background-color:#190f53;
@@ -207,258 +243,6 @@ header{
     font-weight: bold;
     font-size: 2vh;
 }
-#nosotros{
-    background-image: url('/images/hiker-1082297_1280.jpg');
-    position: relative;
-    background-size: cover;
-    height:30vw;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-}
-#nosotros>div{
-    position: relative;
-    width:25%;
-    height:90%;
-    background-color:#ffffff;
-    padding:1vw;
-    margin:4vw 8vw;
-}
-#nosotros>div>div>h1{
-    font-weight:bold;
-    color:#190f53;
-}
-#nosotros>div>div{
-    position: relative;
-}
-#nosotros>div>p{
-    text-align: justify;
-}
-.contenedorBotonDiscubrir{
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.contenedorBotonDiscubrir>a{
-    background-color:#190f53;
-    color:#ffff00;
-    padding:1vw;
-    font-weight:bold;
-}
-#nosotros>div>div>h1:before{
-    content:'';
-    position: absolute;
-    background-color: #ffff00;
-    height: 3px;
-    width:60%;
-    bottom:-1vh;
-}
-#ubicacion{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin:2vw;
-}
-#ubicacion>iframe{
-    position: relative;
-    width:50vw;
-}
-#ubicacion>div{
-    margin:1vw;
-}
-.formulario{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.edit{
-    margin:1vh;
-    height: 2.5vw;
-}
-textarea{
-    margin:1vh;
-}
-.botonEnviarMensaje{
-    background-color:#ffff00;
-    color:#190f53;
-    font-size:2vw;
-    font-weight: bold;
-    font-style: oblique;
-    padding:1vw;
-}
-.contenedorBotonEnviarMensaje{
-    margin:1vw 0;
-}
-footer{
-    background-color:#190f53;
-    min-height: 10vh;
-}
-.containerFooter{
-    display:grid;
-    grid-gap:10px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows:minmax(100px,auto);
-    background-color:#190f53;
-    color:#ffffff;
-}
-.footerAyuda{
-    grid-column:3/span 3;
-}
-
-.footerInformacion{
-    grid-column:6/span 3;
-}
-.footerSuscribirse{
-    grid-column:9/span 3;
-}
-.footerInformacion>ul{
-    list-style: none;
-    padding:0;
-}
-.footerSuscribirse>button{
-    margin-top:2vw;
-    padding:0.5vw;
-    font-size:1vw;
-    font-weight: bold;
-    background: #ffff00;
-    border:0;
-}
-.footerSuscribirse>input{
-    font-size: 1vw;
-}
-.derechos{
-    color:#ffffff;
-    text-align: center;
-    font-size: 0.8em;
-}
-
-/*Estilos Hector*/
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
-#SContact {
-    background-color: #f0f0f0;
-}
-#map{
-    margin-top: 6em;
-    background-color: black;
-    height: 450px;
-    width: 400px;
-}
-form{
-    margin-top: 4em;
-    font-size: 0.95em;
-}
-
-.contenedorCarousel{
-    display: none;
-    position: relative;
-    width:40%;
-    height:30%;
-}
-.carouselImagen{
-    display:block;
-    display:relative;
-    width:100%;
-    height: 100%;
-}
-.item>img{
-    background-size:cover;
-}
-
-@media (max-width:1255px){
-    #nosotros>div>div>h1{
-        font-size: 2vw;
-    }
-    #nosotros>div>div>h1:before{
-        bottom:0;
-        width:25%
-    }
-    #nosotros>div>p{
-        font-size: 1vw;
-    }
-    #nosotros>div>div>a{
-        font-size: 2vw;
-    }
-    #ubicacion{
-        display: flex;
-        flex-direction: row;
-    }
-    iframe{
-        width:40vw;
-        height:50vh;
-    }
-    .contenedorInputs>input{
-        position: relative;
-        width:40vw;
-        font-size:2vw;
-    }
-    .contenedorTextarea>textarea{
-        width:40vw;
-        height: 8vh;
-        font-size:2vw;
-    }
-    .contenedorContacto{
-        width:40vw;
-        font-size:2vw;
-    }
-}
-@media (max-width:1050px){
-    .footerAyuda{
-        grid-column:2/span 3;
-    }
-}
-@media (max-width:900px){
-    #nosotros>div{
-        position: relative;
-        width: 50vw;
-        padding:1vw 3vw;
-    }
-    #nosotros>div>div>h1{
-        font-size: 2vw;
-    }
-    #nosotros>div>div>h1:before{
-        bottom:0;
-        width:25%
-    }
-    #nosotros>div>p{
-        font-size: 1vw;
-    }
-    #nosotros>div>div>a{
-        font-size: 2vw;
-    }
-    #ubicacion{
-        display: flex;
-        flex-direction: row;
-    }
-    iframe{
-        width:40vw;
-        height:50vh;
-    }
-    .contenedorInputs>input{
-        position: relative;
-        width:40vw;
-        font-size:2vw;
-    }
-    .contenedorTextarea>textarea{
-        width:40vw;
-        height: 8vh;
-        font-size:2vw;
-    }
-    .contenedorContacto{
-        width:40vw;
-        font-size:2vw;
-    }
-}
-@media (max-width:790px){
-    .footerAyuda{
-        grid-column:1/span 3;
-    }
-}
 
 @media(max-width:770px){
     #primeraFilaDestinos{
@@ -466,18 +250,59 @@ form{
         position: relative;
         flex-direction:row;
         width:90%;
-     }
-     #segundaFilaDestinos{
+    }
+    #segundaFilaDestinos{
         display:flex;
         position: relative;
         flex-direction:row;
         width:90%;
-     }
-     #segundaFilaDestinos>div>img{
+    }
+    #terceraFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+    }
+    #cuartaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+    }
+    #quintaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+    }
+    #sextaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+    }
+    #primeraFilaDestinos>div>img{
         width: 25vw;
         height: 20vw;
     }
-    #primeraFilaDestinos>div>img{
+    #segundaFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    
+    #terceraFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    #cuartaFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    #quintaFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    #sextaFilaDestinos>div>img{
         width: 25vw;
         height: 20vw;
     }
@@ -486,101 +311,114 @@ form{
     }
 }
 @media (max-width:700px){
-    iframe{
-        width:40vw;
-        height:40vh;
-    }
+   
 }
 @media(max-width:500px){
     .contenedorLogo>p{
         font-size: 3vw;
         margin:0;
     }
-    #carouselMovil{
-        display:grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
-        margin:3vw 0;
-    }
-    .contenedorCarousel{
-        width:70%;
-        height:70%;
-        display:grid;
-        grid-column: 4/span 10;
-    }
-    #SeccionDestinos{
-        display:none;
-    }
-    .item>h2{
-        font-size:3vw;
-        padding:0;
-        margin:0;
-    }
-    .item{
-        text-align: center;
-    }
-    #nosotros>div{
+    #primeraFilaDestinos{
+        display:flex;
         position: relative;
-        width: 50vw;
-        padding:1vw 3vw;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    #nosotros>div>div>h1{
-        font-size: 2vw;
-    }
-    #nosotros>div>p{
-        font-size: 1vw;
-    }
-    #nosotros>div>div>a{
-        font-size: 2vw;
-    }
-    #ubicacion{
-        display: flex;
-        flex-direction: column;
-    }
-    iframe{
-        width:95vw;
-        height:40vh;
-    }
-    .contenedorInputs>input{
+    #segundaFilaDestinos{
+        display:flex;
         position: relative;
-        width:90vw;
-        font-size:2vw;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    .contenedorTextarea>textarea{
-        width:90vw;
-        height: 10vh;
-        font-size:2vw;
+    
+    #terceraFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    .footerAyuda{
-        grid-column:2/span 10;
-    }    
-    .footerAyuda>h3{
-        font-size:3vw;
+    #cuartaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    .footerInformacion>h3{
-        font-size: 3vw;
+    #quintaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    .footerInformacion>ul>li{
-        font-size: 2vw;
+    #sextaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width:80%;
     }
-    .footerSuscribirse>h3{
-        font-size: 3vw;
+    #primeraFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
-    .footerAyuda>p{
-        font-size:2vw;
+    #segundaFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
-    .footerAyuda{
-        grid-column: 4/span 10;
+    #terceraFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
-    .footerInformacion{
-        grid-column:4/span 10;
+    #cuartaFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
-    .footerSuscribirse{
-        grid-column:4/span 10;
+    #quintaFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
-    .footerInformacion>ul{
-        list-style: none;
-        padding:0;
+    #sextaFilaDestinos>div>img{
+        width: 20vw;
+        height: 15vw;
     }
+    .descuento{
+        font-size: 0.5em;
+    }
+    .precio {
+        width:7vw;
+        height: 2.7vh;
+    }
+    .precio>div{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #primeraFilaDestinos>div>h2{
+       font-weight: bold;
+       font-size: 0.8em;
+    }
+    #segundaFilaDestinos>div>h2{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #terceraFilaDestinos>div>h2{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #cuartaFilaDestinos>div>h2{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #quintaFilaDestinos>div>h2{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #sextaFilaDestinos>div>h2{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+ 
 }

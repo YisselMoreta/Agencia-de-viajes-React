@@ -1,127 +1,120 @@
-import React from 'react';
 import '../CSS/login.scss';
 import { Link } from 'react-router-dom';
 
+import withFirebaseAuth from 'react-with-firebase-auth';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import React, { Component } from 'react';
+import firebaseConfig from '../Auth/firebase';
 
-export default class Login extends React.Component {
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+class Login extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			user: '',
-			password: '',
-			_id: ''
-			
-		};
+		
 	}
-	handleChange = (event) => {
-		const value = event.target.value;
-		this.setState({ [event.target.name]: value });
-	};
-	handleSubmit = (event) => {
-		event.preventDefault();
-		const { user, password } = this.state;
-		fetch('http://localhost:3001/user/login', {
-			method: 'POST',
-			body: JSON.stringify(this.state),
-			 headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            } 
-		})
-		.then(res => res.json())
-		.then(data => console.log(data))
-		.catch(error => console.log(error));
+	
+	handleClick = (event) => {
+	
+		firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((res) => console.log(res));
+		firebase.auth().onAuthStateChanged(function(currentUser) {
+  	if (currentUser) {
+	   window.location = 'userLog';
+    
+  	}
+});
 	};
 	render() {
+		const { user, signOut, singWithGoogle } = this.props;
 		return (
 			<div>
-				<header>
-					<div>
-						<div className="menuCabecera">
-							<div className="contenedorLogo">
-								<Link to="/">
-									<img src="/images/iconoweb.png" alt="Logo" />
-								</Link>
-								<p>GeeksHubs</p>
-								<p>Travel</p>
-							</div>
-							<ul>
-								   	<li><Link to="/#SeccionDestinos">Destinos</Link></li>
-                    				<li><Link to="/#nosotros">Quiénes somos</Link></li>
-                    				<li><Link to="/#ubicacion">Dónde estamos</Link></li>
-							</ul>
-							<div className="iconosRedes">
-								<img src="/images/fb-ico.png" alt="Logo Facebook" />
-								<img src="/images/tt-ico.png" alt="Logo twitter" />
-								<img src="/images/linkedin.png" alt="Logo linkedin" />
-								<img src="/images/instagram.png" alt="Logo de instagram" />
-								<img src="/images/Google.png" alt="Logo de google" />
-							</div>
-						</div>
-					</div>
-				</header>
-				<section id="sectionLogin">
-					<div className="fondoBlanco">
-						<div className="contenedorFormulario">
-							<form onSubmit={this.handleSubmit}>
-								<h1>LOGIN</h1>
-								<div className="contenedorInput">
-									<input
-										type="text"
-										name="user"
-										placeholder="Usuario"
-										value={this.state.user}
-										onChange={this.handleChange}
-										autoFocus
-									/>
-									<input
-										type="password"
-										name="password"
-										placeholder="Contraseña"
-										value={this.state.password}
-										onChange={this.handleChange}
-									/>
+				<div>
+					<header>
+						<div>
+							<div className="menuCabecera">
+								<div className="contenedorLogo">
+									<Link to="/">
+										<img src="/images/iconoweb.png" alt="Logo" />
+									</Link>
+									<p>GeeksHubs</p>
+									<p>Travel</p>
 								</div>
-								{/* <Link to="#"> */}
-								 <button type="submit" className="submit" value="Submit">Enviar</button>
-								{/* </Link> */}
-							</form>
+								<ul>
+									<li>
+										<Link to="/#SeccionDestinos">Destinos</Link>
+									</li>
+									<li>
+										<Link to="/#nosotros">Quiénes somos</Link>
+									</li>
+									<li>
+										<Link to="/#ubicacion">Dónde estamos</Link>
+									</li>
+								</ul>
+								<div className="iconosRedes">
+									<img src="/images/fb-ico.png" alt="Logo Facebook" />
+									<img src="/images/tt-ico.png" alt="Logo twitter" />
+									<img src="/images/linkedin.png" alt="Logo linkedin" />
+									<img src="/images/instagram.png" alt="Logo de instagram" />
+									<img src="/images/Google.png" alt="Logo de google" />
+								</div>
+							</div>
 						</div>
-					</div>
-				</section>
+					</header>
+					<section id="sectionLogin">
+						<div className="fondoBlanco">
+							{user ? <p>Hola, {user.displayName}</p> :  <i id="plane" className="material-icons prefix">insert_flight_land</i>}
+							
+							{user ? (
+								<button onClick={signOut}>Sign Out</button>
+							) : (
+								<button onClick={this.handleClick}>Sign In with Google</button>
+							)}
+						</div>
+					</section>
 
-				<footer>
-					<div className="containerFooter">
-						<div className="footerAyuda">
-							<h3>¿NECESITAS AYUDA?</h3>
-							<p>0264 123 4567</p>
-							<p>enquiry@geekshubstravels.com</p>
-							<p>Lun-Vie. 9:30-19:00 Sab: 10:00-14:00</p>
+					<footer>
+						<div className="containerFooter">
+							<div className="footerAyuda">
+								<h3>¿NECESITAS AYUDA?</h3>
+								<p>0264 123 4567</p>
+								<p>enquiry@geekshubstravels.com</p>
+								<p>Lun-Vie. 9:30-19:00 Sab: 10:00-14:00</p>
+							</div>
+							<div className="footerInformacion">
+								<h3>INFORMACIÓN</h3>
+								<ul>
+									<li>Quiénes somos</li>
+									<li>Preguntas frecuentes</li>
+									<li>Política de privacidad</li>
+									<li>Condiciones generales</li>
+									<li>Aviso legal</li>
+									<li>Contacto</li>
+									<li>Programa de puntos</li>
+								</ul>
+							</div>
+							<div className="footerSuscribirse">
+								<h3>SUSCRÍBETE AL NEWSLETTER</h3>
+								<input type="text" name="mail" id="" size="30" placeholder="Correo electrónico" />
+								<br />
+								<button>SUSCRÍBETE</button>
+							</div>
 						</div>
-						<div className="footerInformacion">
-							<h3>INFORMACIÓN</h3>
-							<ul>
-								<li>Quiénes somos</li>
-								<li>Preguntas frecuentes</li>
-								<li>Política de privacidad</li>
-								<li>Condiciones generales</li>
-								<li>Aviso legal</li>
-								<li>Contacto</li>
-								<li>Programa de puntos</li>
-							</ul>
+						<div className="derechos">
+							<p>GeeksHubs Travels 2019 Todos los derechos reservados.</p>
 						</div>
-						<div className="footerSuscribirse">
-							<h3>SUSCRÍBETE AL NEWSLETTER</h3>
-							<input type="text" name="mail" id="" size="30" placeholder="Correo electrónico" />
-							<br />
-							<button>SUSCRÍBETE</button>
-						</div>
-					</div>
-					<div className="derechos">
-						<p>GeeksHubs Travels 2019 Todos los derechos reservados.</p>
-					</div>
-				</footer>
+					</footer>
+				</div>
 			</div>
 		);
 	}
 }
+
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+	googleProvider: new firebase.auth.GoogleAuthProvider()
+};
+providers.googleProvider.addScope('profile');
+export default withFirebaseAuth({
+	providers,
+	firebaseAppAuth
+})(Login);

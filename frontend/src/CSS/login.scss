@@ -51,6 +51,13 @@
     justify-content: center;
     padding:2vw 0;
 }
+#plane{
+    font-size: 23px;
+    height: 20vh;
+    width: 10vw;
+    
+}
+
 .contenedorFormulario>form{
     display:flex;
     flex-direction:column;
@@ -131,4 +138,191 @@ footer{
     color:#ffffff;
     text-align: center;
     font-size: 0.8em;
+}
+
+@media (max-width:1050px){
+    .footerAyuda{
+        grid-column:2/span 3;
+    }
+}
+@media (max-width:900px){
+    #nosotros>div{
+        position: relative;
+        width: 50vw;
+        padding:1vw 3vw;
+    }
+    #nosotros>div>div>h1{
+        font-size: 2vw;
+    }
+    #nosotros>div>div>h1:before{
+        bottom:0;
+        width:25%
+    }
+    #nosotros>div>p{
+        font-size: 1vw;
+    }
+    #nosotros>div>div>a{
+        font-size: 2vw;
+    }
+    #ubicacion{
+        display: flex;
+        flex-direction: row;
+    }
+    iframe{
+        width:40vw;
+        height:50vh;
+    }
+    .contenedorInputs>input{
+        position: relative;
+        width:40vw;
+        font-size:2vw;
+    }
+    .contenedorTextarea>textarea{
+        width:40vw;
+        height: 8vh;
+        font-size:2vw;
+    }
+    .contenedorContacto{
+        width:40vw;
+        font-size:2vw;
+    }
+}
+@media (max-width:790px){
+    .footerAyuda{
+        grid-column:1/span 3;
+        margin-left: -7vh;
+    }
+}
+
+@media(max-width:770px){
+    #primeraFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+     }
+     #segundaFilaDestinos{
+        display:flex;
+        position: relative;
+        flex-direction:row;
+        width:90%;
+     }
+     #segundaFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    #primeraFilaDestinos>div>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    .descuento{
+        font-size: 1vh;
+    }
+}
+@media (max-width:700px){
+    iframe{
+        width:40vw;
+        height:40vh;
+    }
+}
+@media(max-width:500px){
+    .contenedorLogo>p{
+        font-size: 3vw;
+        margin:0;
+    }
+    #carouselMovil{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        margin:3vw 0;
+    }
+    .contenedorCarousel{
+        width:70%;
+        height:70%;
+        display:grid;
+        grid-column: 4/span 10;
+    }
+    /* #SeccionDestinos{
+        display:none;
+    } */
+    .item>h2{
+        font-size:3vw;
+        padding:0;
+        margin:0;
+    }
+    .item{
+        text-align: center;
+    }
+    #nosotros>div{
+        position: relative;
+        width: 50vw;
+        padding:1vw 3vw;
+    }
+    #nosotros>div>div>h1{
+        font-size: 2vw;
+    }
+    #nosotros>div>p{
+        font-size: 1vw;
+    }
+    #nosotros>div>div>a{
+        font-size: 2vw;
+    }
+    #ubicacion{
+        display: flex;
+        flex-direction: column;
+    }
+    iframe{
+        width:95vw;
+        height:40vh;
+    }
+    .contenedorInputs>input{
+        position: relative;
+        width:90vw;
+        font-size:2vw;
+    }
+    .contenedorTextarea>textarea{
+        width:90vw;
+        height: 10vh;
+        font-size:2vw;
+    }
+    .footerAyuda{
+        grid-column:2/span 10;
+    }    
+    .footerAyuda>h3{
+        font-size:3vw;
+    }
+    .footerInformacion>h3{
+        font-size: 3vw;
+    }
+    .footerInformacion>ul>li{
+        font-size: 2vw;
+    }
+    .footerSuscribirse>h3{
+        font-size: 3vw;
+    }
+    .footerAyuda>p{
+        font-size:2vw;
+    }
+    .footerAyuda{
+        grid-column: 4/span 10;
+    }
+    .footerInformacion{
+        grid-column:4/span 10;
+    }
+    .footerSuscribirse{
+        grid-column:4/span 10;
+    }
+    .footerInformacion>ul{
+        list-style: none;
+        padding:0;
+    }
+    #plane{
+        font-size: 25px;
+        height: 20vh;
+        width: 20vw;
+        margin: 0;
+        padding: 0;
+        
+    }
 }

@@ -469,9 +469,9 @@ form{
         display:grid;
         grid-column: 4/span 10;
     }
-    #SeccionDestinos{
+    /* #SeccionDestinos{
         display:none;
-    }
+    } */
     .item>h2{
         font-size:3vw;
         padding:0;

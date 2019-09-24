@@ -28,9 +28,6 @@ function App() {
     <Route path="/confirmacion" component={Confirmacion} exact />
     <Route path="/perfil" component={Perfil} exact />
     <Route path="/userlog" component={UserLog} exact />
-    
-
-
     </Switch>
     </BrowserRouter>     
     </div>

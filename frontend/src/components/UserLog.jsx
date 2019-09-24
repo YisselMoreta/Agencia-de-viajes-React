@@ -1,15 +1,15 @@
 import React from 'react';
 import '../CSS/userlog.css';
-// import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link'; 
 
 
 
-export default class PaginaPrincipal extends React.Component{
+export default class UserLog extends React.Component{
     
     
 
     render(){
+        
         return(
             <div>
            <header>
@@ -70,8 +70,8 @@ export default class PaginaPrincipal extends React.Component{
                     </div>
                 </div>
                 <div>
-                    <img src="/images/ciudad_mexico.jpg" alt="Ciudad de méxico"/>
-                    <h2>Ciudad de méxico</h2>
+                    <img src="/images/ciudad_mexico.jpg" alt="México"/>
+                    <h2>México</h2>
                     <div className="descuento">
                         Ahorra 35€ 
                     </div>
@@ -201,9 +201,87 @@ export default class PaginaPrincipal extends React.Component{
                 </div>
             </div>
         </div>
-
-    
-
+        </section>
+        <section id="SeccionDestinos">
+        <div id="sdestinos">
+        <div id="quintaFilaDestinos">
+                <div>
+                    <img src="/images/RepDominicana.jpg" alt="República Dominicana"/>
+                    <h2>Dominicana</h2>
+                    <div className="descuento">
+                        Ahorra 60€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            520€
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/Alaska.jpg" alt="Alaska"/>
+                    <h2>Alaska</h2>
+                    <div className="descuento">
+                        Ahorra 110€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            315€
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/Alemania.jpg" alt="Alemania"/>
+                    <h2>Alemania</h2>
+                    <div className="descuento">
+                        Ahorra 82€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            609€
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sextaFilaDestinos">
+                <div>
+                    <img src="/images/Chicago.jpg" alt="Chicago"/>
+                    <h2>Chicago</h2>
+                    <div className="descuento">
+                        Ahorra 70€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            390€
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/Venezuela.jpg" alt="Venezuela"/>
+                    <h2>Venezuela</h2>
+                    <div className="descuento">
+                        Ahorra 120€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            399€
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/Varsovia.jpg" alt="Varsovia"/>
+                    <h2>Varsovia</h2>
+                    <div className="descuento">
+                        Ahorra 85€ 
+                    </div>
+                    <div className="precio">
+                        <div>
+                            690€
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
 
     </section>
 
