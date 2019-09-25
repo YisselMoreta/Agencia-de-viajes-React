@@ -1,3 +1,10 @@
+*{
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Montserrat', sans-serif; */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 #seccion3
 {
     background-image: url('/images/nathan-anderson-316188-unsplash.jpg');
@@ -5,9 +12,6 @@
 #subseccion3
 {
     width: 33%;
-}
-*{
-    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -24,6 +28,7 @@ header{
 }
 .menuCabecera>ul{
     list-style: none;
+    
 }
 .menuCabecera>ul>li{
     float:left;
@@ -31,10 +36,12 @@ header{
     font-size:1vw;
     font-weight: bold;
     color:#ffffff;
+    
 }
 .menuCabecera>ul>li>a{
     text-decoration: none;
     color:#ffffff;
+    font-size: 28px;
 }
 .contenedorLogo{
     display:flex;
@@ -45,6 +52,7 @@ header{
 }
 .contenedorLogo>p{
     font-weight: bold;
+    font-size: 28px;
 }
 .contenedorLogo>a>img{
     width:8vw;
@@ -70,21 +78,24 @@ header{
     position: relative;
     height:40vw;
 }
-#home>div>h1{
+#home>div>h1>pre{
     color:#ffffff;
     font-weight: bold;
     font-size:6vw;
+    font-family: 'Dancing Script', cursive;
 }
-#home>div>h3{
+#home>div>h3>pre{
     color:#ffffff;
     font-weight: bold;
     font-size:3vw;
+    font-family: 'Dancing Script', cursive;
 }
 .botonDestinos{
     color:#190f53;
     text-decoration: none;
     font-weight: bold;
     background-color:#ffff00;
+    border-radius: 5px;
     font-size: 1.5vw;
     padding:1.5vw;
     font-style: oblique;
@@ -102,10 +113,13 @@ header{
    display:flex;
    position: relative;
    flex-direction:row;
+   
 }
 #primeraFilaDestinos>div>img{
     width: 20vw;
     height: 15vw;
+    
+   
 }
 #primeraFilaDestinos>div{
     margin: 2vw;
@@ -204,6 +218,8 @@ header{
     color:#ffff00;
     padding:1vw;
     font-weight:bold;
+    border-radius: 3px;
+
 }
 #nosotros>div>div>h1:before{
     content:'';
@@ -246,6 +262,8 @@ textarea{
     font-weight: bold;
     font-style: oblique;
     padding:1vw;
+    border-radius: 3px;
+
 }
 .contenedorBotonEnviarMensaje{
     margin:1vw 0;
@@ -456,30 +474,7 @@ form{
         font-size: 3vw;
         margin:0;
     }
-    #carouselMovil{
-        display:grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
-        margin:3vw 0;
-    }
-    .contenedorCarousel{
-        width:70%;
-        height:70%;
-        display:grid;
-        grid-column: 4/span 10;
-    }
-    /* #SeccionDestinos{
-        display:none;
-    } */
-    .item>h2{
-        font-size:3vw;
-        padding:0;
-        margin:0;
-    }
-    .item{
-        text-align: center;
-    }
+    
     #nosotros>div{
         position: relative;
         width: 50vw;
@@ -512,9 +507,7 @@ form{
         height: 10vh;
         font-size:2vw;
     }
-    .footerAyuda{
-        grid-column:2/span 10;
-    }    
+       
     .footerAyuda>h3{
         font-size:3vw;
     }
@@ -531,16 +524,23 @@ form{
         font-size:2vw;
     }
     .footerAyuda{
-        grid-column: 4/span 10;
+        grid-column:8/span 8;
     }
     .footerInformacion{
-        grid-column:4/span 10;
+        grid-column:18/span 12;
     }
     .footerSuscribirse{
-        grid-column:4/span 10;
+        grid-column:18/span 10;
     }
     .footerInformacion>ul{
         list-style: none;
         padding:0;
     }
+    .containerFooter{
+        height: 25vh;
+    }
+    .menuCabecera>ul>li>a{
+        font-size: 3em;
+    }
+  
 }

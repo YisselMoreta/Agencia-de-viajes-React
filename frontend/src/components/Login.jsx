@@ -11,18 +11,15 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 class Login extends Component {
 	constructor(props) {
 		super(props);
-		
 	}
-	
+
 	handleClick = (event) => {
-	
 		firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((res) => console.log(res));
 		firebase.auth().onAuthStateChanged(function(currentUser) {
-  	if (currentUser) {
-	   window.location = 'userLog';
-    
-  	}
-});
+			if (currentUser) {
+				window.location = 'userLog';
+			}
+		});
 	};
 	render() {
 		const { user, signOut, singWithGoogle } = this.props;
@@ -62,8 +59,12 @@ class Login extends Component {
 					</header>
 					<section id="sectionLogin">
 						<div className="fondoBlanco">
-							{user ? <p>Hola, {user.displayName}</p> :  <i id="plane" className="material-icons prefix">insert_flight_land</i>}
-							
+							{user ? (
+								<p>Hola, {user.displayName}</p>
+							) : (
+								<p/>
+							)}
+
 							{user ? (
 								<button onClick={signOut}>Sign Out</button>
 							) : (

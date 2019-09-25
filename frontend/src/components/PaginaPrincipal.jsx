@@ -36,8 +36,8 @@ export default class PaginaPrincipal extends React.Component{
         </div>
         <div id="home">
             <div>
-                <h1>Viaja! </h1>
-                <h3>Descubre lugares maravillosos!</h3>
+                    <h1><pre>     Viaja! </pre></h1>
+                <h3><pre>Descubre lugares maravillosos!</pre></h3>
             </div>
             <div className="contenedorBotonDestinos">
                 <Link to="#SeccionDestinos" className="botonDestinos">Ver destinos</Link>
@@ -75,7 +75,7 @@ export default class PaginaPrincipal extends React.Component{
                 </div>
                 <div>
                     <img src="/images/ciudad_mexico.jpg" alt="Ciudad de méxico"/>
-                    <h2>Ciudad de méxico</h2>
+                    <h2>México</h2>
                     <div className="descuento">
                         Ahorra 35€ 
                     </div>
@@ -128,109 +128,7 @@ export default class PaginaPrincipal extends React.Component{
     </section>
 
 
-    <section id="carouselMovil">
-        <div className="contenedorCarousel">
-            <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                
-                <ol className="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                </ol>
-
-                
-                <div className="carouselImagenes">
-                    <div className="carousel-inner">
-                        <div className="item active">
-                            <img src="/images/beijing.jpg" alt="Beijing"/>
-                            <h2>Beijing</h2>
-                            <div className="descuento">
-                                Ahorra 90€ 
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    359€
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src="/images/buenos_aires.jpg" alt="Buenos Aires"/>
-                            <h2>Buenos Aires</h2>
-                            <div className="descuento">
-                                Ahorra 75€
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    729€
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src="/images/ciudad_mexico.jpg" alt="Ciudad de méxico"/>
-                            <h2>Ciudad de méxico</h2>
-                            <div className="descuento">
-                                Ahorra 35€
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    519€
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src="/images/madrid.jpg" alt="Madrid"/>
-                            <h2>Madrid</h2>
-                            <div className="descuento">
-                                Ahorra 65€
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    329€
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src="/images/new_york.jpg" alt="New York"/>
-                            <h2>New York</h2>
-                            <div className="descuento">
-                                Ahorra 95€
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    199€
-                                </div>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <img src="/images/tokyo.jpg" alt="Tokio"/>
-                            <h2>Tokio</h2>
-                            <div className="descuento">
-                                Ahorra 50€ 
-                            </div>
-                            <div className="precio">
-                                <div>
-                                    659€
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <Link className="left carousel-control" to="#myCarousel" data-slide="prev">
-                    <span className="glyphicon glyphicon-chevron-left"></span>
-                    <span className="sr-only">Anterior</span>
-                </Link>
-                <Link className="right carousel-control" to="#myCarousel" data-slide="next">
-                    <span className="glyphicon glyphicon-chevron-right"></span>
-                    <span className="sr-only">Siguiente</span>
-                </Link>
-            </div>
-        </div>
-    </section>
+    
 
     <section id="nosotros">
         <div>

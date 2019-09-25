@@ -1,7 +1,8 @@
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 .menuCabecera{
     display:flex;

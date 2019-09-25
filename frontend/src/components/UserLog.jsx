@@ -39,6 +39,7 @@ export default class UserLog extends React.Component{
     </header>
       <div className="contenedorBotonDestinos">
                 <Link to="#SeccionDestinos" className="botonDestinos">Bienvenid@</Link>
+                
             </div>
 
 

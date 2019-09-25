@@ -39,12 +39,12 @@ export default class Index extends React.Component{
         <div className="fondoBlanco">
         <div className="contenedorBotones">
         <h1>Bienvenidos a</h1>
-        <img src="/images/iconoweb.png" alt="logo"/>
+        <img className="logoCentro" src="/images/iconoweb.png" alt="logo"/>
         <p>GeeksHubs</p> 
         <p>Travel</p>
         <div className="botones">
             <Link to="/login">Login</Link>
-            <Link to="/registro">Registro</Link>
+            {/* <Link to="/registro">Registro</Link> */}
         </div>
         </div>
         </div>

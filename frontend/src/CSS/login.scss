@@ -1,7 +1,8 @@
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dancing Script', cursive;
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 .menuCabecera{
     display:flex;
@@ -51,12 +52,7 @@
     justify-content: center;
     padding:2vw 0;
 }
-#plane{
-    font-size: 23px;
-    height: 20vh;
-    width: 10vw;
-    
-}
+
 
 .contenedorFormulario>form{
     display:flex;
@@ -93,6 +89,7 @@ button{
     font-size: 1.5vw;
     background-color:#ffff00;
     border:0;
+    border-radius: 3px;
 }
 footer{
     background-color:#190f53;
@@ -115,25 +112,12 @@ footer{
     grid-column:6/span 3;
     padding:1vw;
 }
-.footerSuscribirse{
-    grid-column:9/span 3;
-    padding:1vw;
-}
+
 .footerInformacion>ul{
     list-style: none;
     padding:0;
 }
-.footerSuscribirse>button{
-    margin-top:2vw;
-    padding:0.5vw;
-    font-size:1vw;
-    font-weight: bold;
-    background: #ffff00;
-    border:0;
-}
-.footerSuscribirse>input{
-    font-size: 1vw;
-}
+
 .derechos{
     color:#ffffff;
     text-align: center;
@@ -146,46 +130,8 @@ footer{
     }
 }
 @media (max-width:900px){
-    #nosotros>div{
-        position: relative;
-        width: 50vw;
-        padding:1vw 3vw;
-    }
-    #nosotros>div>div>h1{
-        font-size: 2vw;
-    }
-    #nosotros>div>div>h1:before{
-        bottom:0;
-        width:25%
-    }
-    #nosotros>div>p{
-        font-size: 1vw;
-    }
-    #nosotros>div>div>a{
-        font-size: 2vw;
-    }
-    #ubicacion{
-        display: flex;
-        flex-direction: row;
-    }
-    iframe{
-        width:40vw;
-        height:50vh;
-    }
-    .contenedorInputs>input{
-        position: relative;
-        width:40vw;
-        font-size:2vw;
-    }
-    .contenedorTextarea>textarea{
-        width:40vw;
-        height: 8vh;
-        font-size:2vw;
-    }
-    .contenedorContacto{
-        width:40vw;
-        font-size:2vw;
-    }
+   
+    
 }
 @media (max-width:790px){
     .footerAyuda{
@@ -195,100 +141,19 @@ footer{
 }
 
 @media(max-width:770px){
-    #primeraFilaDestinos{
-        display:flex;
-        position: relative;
-        flex-direction:row;
-        width:90%;
-     }
-     #segundaFilaDestinos{
-        display:flex;
-        position: relative;
-        flex-direction:row;
-        width:90%;
-     }
-     #segundaFilaDestinos>div>img{
-        width: 25vw;
-        height: 20vw;
-    }
-    #primeraFilaDestinos>div>img{
-        width: 25vw;
-        height: 20vw;
-    }
-    .descuento{
-        font-size: 1vh;
-    }
+   
 }
 @media (max-width:700px){
-    iframe{
-        width:40vw;
-        height:40vh;
-    }
+   
 }
 @media(max-width:500px){
     .contenedorLogo>p{
         font-size: 3vw;
         margin:0;
     }
-    #carouselMovil{
-        display:grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
-        margin:3vw 0;
+    button{
+        font-size: 1em;
     }
-    .contenedorCarousel{
-        width:70%;
-        height:70%;
-        display:grid;
-        grid-column: 4/span 10;
-    }
-    /* #SeccionDestinos{
-        display:none;
-    } */
-    .item>h2{
-        font-size:3vw;
-        padding:0;
-        margin:0;
-    }
-    .item{
-        text-align: center;
-    }
-    #nosotros>div{
-        position: relative;
-        width: 50vw;
-        padding:1vw 3vw;
-    }
-    #nosotros>div>div>h1{
-        font-size: 2vw;
-    }
-    #nosotros>div>p{
-        font-size: 1vw;
-    }
-    #nosotros>div>div>a{
-        font-size: 2vw;
-    }
-    #ubicacion{
-        display: flex;
-        flex-direction: column;
-    }
-    iframe{
-        width:95vw;
-        height:40vh;
-    }
-    .contenedorInputs>input{
-        position: relative;
-        width:90vw;
-        font-size:2vw;
-    }
-    .contenedorTextarea>textarea{
-        width:90vw;
-        height: 10vh;
-        font-size:2vw;
-    }
-    .footerAyuda{
-        grid-column:2/span 10;
-    }    
     .footerAyuda>h3{
         font-size:3vw;
     }
@@ -305,24 +170,30 @@ footer{
         font-size:2vw;
     }
     .footerAyuda{
-        grid-column: 4/span 10;
+        grid-column:4/span 8;
     }
     .footerInformacion{
-        grid-column:4/span 10;
+        grid-column:12/span 15;
     }
     .footerSuscribirse{
-        grid-column:4/span 10;
+        grid-column:8/span 8;
     }
     .footerInformacion>ul{
         list-style: none;
         padding:0;
     }
-    #plane{
-        font-size: 25px;
-        height: 20vh;
-        width: 20vw;
-        margin: 0;
-        padding: 0;
-        
+  
+    .containerFooter{
+        height: 25vh;
     }
+    .menuCabecera{
+        height: 6vh;
+    }
+    .fondoBlanco{
+       height: 6vh;
+    }
+    .navegacion{
+        font-size: 2em;
+    }
+   
 }
